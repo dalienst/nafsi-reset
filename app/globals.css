@@ -13,4 +13,6 @@
   color: #ffffff;
   border-radius: 10px;
   text-align: center;
+  border: none;
+  transition: all 0.3s ease-in-out;
 }

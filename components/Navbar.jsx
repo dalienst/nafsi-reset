@@ -86,7 +86,7 @@ function Navbar() {
             <li className="nav-item ">
               <Link
                 href="https://calendar.app.google/eztAN5U4eLNCm19X6"
-                className="nav-link nav-btn"
+                className="nav-link nav-btn btn btn-sm"
               >
                 Book Now
               </Link>
