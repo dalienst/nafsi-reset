@@ -26,13 +26,7 @@ export default function About() {
   return (
     <section id="about" className="py-5 bg-white">
       <div className="container">
-        <div className="row align-items-center">
-          {/* Image Section */}
-          <div className="col-md-6 col-sm-12 mb-3 text-center">
-            <Image src="/poster.jpg" alt="woman" width={350} height={350} />
-          </div>
-
-          {/* Text and Features Section */}
+        <div className="row">
           <div className="col-md-6 col-sm-12">
             <h3 className="text-success fw-bold mb-3">
               Tunakujali. Tunakuskiza. Tuko hapa kwa ajili yako.
@@ -42,22 +36,22 @@ export default function About() {
               for individuals to seek and receive therapy, guiding them to
               recovery.
             </p>
+          </div>
 
+          <div className="col-md-6 col-sm-12">
             {/* Features */}
-            <div className="mt-4">
-              <div className="row px-2">
-                {features.map((feature) => (
-                  <div
-                    key={feature.id}
-                    className="col-12 border rounded  mb-2 bg-light"
-                  >
-                    <div className="text-success mb-2 feature-icon">
-                      {feature.icon}
-                    </div>
-                    <h6 className="fw-semibold">{feature.title}</h6>
+            <div className="row px-2">
+              {features.map((feature) => (
+                <div
+                  key={feature.id}
+                  className="col-12 border rounded  mb-2 bg-light"
+                >
+                  <div className="text-success mb-2 feature-icon">
+                    {feature.icon}
                   </div>
-                ))}
-              </div>
+                  <h6 className="fw-semibold">{feature.title}</h6>
+                </div>
+              ))}
             </div>
           </div>
         </div>
