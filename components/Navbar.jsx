@@ -9,7 +9,7 @@ function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="navbar navbar-expand-md mb-3 shadow">
+    <nav className="navbar navbar-expand-md mb-3 shadow sticky-top">
       <div className="container-fluid">
         <Link href="/" className="navbar-brand nav-brand fw-bold">
           Nafsi Reset
