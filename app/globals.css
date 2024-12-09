@@ -1,14 +1,15 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --greenColor: #327f17;
+  --lighterGreen: #56ad3c;
+  --greenOne: #168a13;
 }
 
 .nav-brand {
-  color: green;
+  color: var(--greenColor);
 }
 
 .nav-btn {
-  background-color: green;
+  background-color: var(--greenColor);
   color: #ffffff;
   border-radius: 10px;
   text-align: center;
