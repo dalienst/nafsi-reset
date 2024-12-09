@@ -5,7 +5,7 @@ import { FaPeopleGroup } from "react-icons/fa6";
 const mainServices = [
   {
     id: 1,
-    icon: <IoIosPerson className="text-primaryBlue text-2xl" />,
+    icon: <IoIosPerson className="service-icon" />,
     title: "Individual Counselling",
     subtitle: "For yourself",
     description:
@@ -13,7 +13,7 @@ const mainServices = [
   },
   {
     id: 2,
-    icon: <IoPeople className="text-primaryBlue text-2xl" />,
+    icon: <IoPeople className="service-icon" />,
     title: "Couple Counselling",
     subtitle: "For you and your partner",
     description:
@@ -21,7 +21,7 @@ const mainServices = [
   },
   {
     id: 3,
-    icon: <IoIosPeople className="text-primaryBlue text-2xl" />,
+    icon: <IoIosPeople className="service-icon" />,
     title: "Family Counselling",
     subtitle: "For your family",
     description:
@@ -29,7 +29,7 @@ const mainServices = [
   },
   {
     id: 4,
-    icon: <FaPeopleGroup className="text-primaryBlue text-2xl" />,
+    icon: <FaPeopleGroup className="service-icon" />,
     title: "Teens Counselling",
     subtitle: "For your teens",
     description:

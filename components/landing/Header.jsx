@@ -5,7 +5,7 @@ import React from "react";
 
 function Header() {
   return (
-    <div className="container-fluid bg-light py-5">
+    <div className="container py-5">
       <section className="row align-items-center">
         {/* Text Section */}
         <div className="col-md-6 mb-4 mb-md-0">
@@ -36,6 +36,7 @@ function Header() {
             width={300}
             height={300}
             className="img-fluid rounded-circle shadow"
+            priority
           />
         </div>
       </section>

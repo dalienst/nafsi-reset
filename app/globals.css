@@ -23,3 +23,27 @@ body {
   border: none;
   transition: all 0.3s ease-in-out;
 }
+
+.service-icon {
+  color: #168a13;
+}
+
+.service-icon-container {
+  font-size: 3rem;
+  color: var(--greenColor);
+  /* Matches your existing color scheme */
+}
+
+.card:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.card-title {
+  font-size: 1.25rem;
+}
+
+.card-text.small {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
