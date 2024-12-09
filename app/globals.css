@@ -47,3 +47,8 @@ body {
   font-size: 0.9rem;
   color: #6c757d;
 }
+
+.feature-icon {
+  font-size: 1rem;
+  color: var(--greenColor);
+}
