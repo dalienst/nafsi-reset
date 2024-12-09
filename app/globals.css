@@ -4,6 +4,26 @@
   --greenOne: #168a13;
 }
 
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg-success {
+  background-color: var(--greenColor) !important;
+}
+
+.text-success {
+  color: var(--greenColor) !important;
+}
+
+.btn-success {
+  background-color: var(--greenColor) !important;
+  border-color: var(--greenColor) !important;
+}
+
 .nav-brand {
   color: var(--greenColor);
 }
@@ -13,4 +33,35 @@
   color: #ffffff;
   border-radius: 10px;
   text-align: center;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-icon {
+  color: #168a13;
+}
+
+.service-icon-container {
+  font-size: 3rem;
+  color: var(--greenColor);
+  /* Matches your existing color scheme */
+}
+
+.service-card:hover {
+  transform: scale(1.05);
+  transition: all 0.3s ease-in-out;
+}
+
+.service-card-title {
+  font-size: 1.25rem;
+}
+
+.service-card-text.small {
+  font-size: 0.9rem;
+  color: #6c757d;
+}
+
+.feature-icon {
+  font-size: 1rem;
+  color: var(--greenColor);
 }
