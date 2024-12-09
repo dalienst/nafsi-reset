@@ -24,29 +24,23 @@ const legal = [
 
 const socials = [
   {
-    id: 1,
-    title: "Facebook",
-    icon: <FaFacebook className="text-white text-2xl" />,
-    link: "https://www.facebook.com/nafsi.reset/",
-  },
-  {
     id: 2,
     title: "Tiktok",
-    icon: <FaTiktok className="text-white text-2xl" />,
-    link: "https://www.tiktok.com/@nafsi_reset",
+    icon: <FaTiktok className="text-white fs-3" />,
+    link: "https://www.tiktok.com/@nafsi_rest",
   },
   {
     id: 3,
     title: "Instagram",
-    icon: <FaInstagram className="text-white text-2xl" />,
+    icon: <FaInstagram className="text-white fs-3" />,
     link: "https://www.instagram.com/nafsi_reset/",
   },
-  {
-    id: 4,
-    title: "Twitter",
-    icon: <FaXTwitter className="text-white text-2xl" />,
-    link: "https://twitter.com/nafsi_reset",
-  },
+  // {
+  //   id: 4,
+  //   title: "Twitter",
+  //   icon: <FaXTwitter className="text-white text-2xl" />,
+  //   link: "https://twitter.com/nafsi_reset",
+  // },
 ];
 
 const contacts = [
