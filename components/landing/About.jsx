@@ -27,7 +27,7 @@ export default function About() {
     <section id="about" className="py-5 bg-white">
       <div className="container py-5">
         <div className="row">
-          <div className="col-md-6 col-sm-12">
+          <div className="col-md-6 col-sm-12 mb-2">
             <h3 className="text-success fw-bold mb-3">
               Tunakujali. Tunakuskiza. Tuko hapa kwa ajili yako.
             </h3>

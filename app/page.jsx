@@ -14,7 +14,6 @@ export default function LandingPage() {
       <Services />
       <About />
       <Therapy />
-      <FollowUp />
       <HowItWorks />
       <MailingList />
     </>
