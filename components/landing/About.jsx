@@ -25,7 +25,7 @@ const features = [
 export default function About() {
   return (
     <section id="about" className="py-5 bg-white">
-      <div className="container">
+      <div className="container py-5">
         <div className="row">
           <div className="col-md-6 col-sm-12">
             <h3 className="text-success fw-bold mb-3">

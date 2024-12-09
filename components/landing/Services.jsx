@@ -16,16 +16,20 @@ export default function Services() {
         <div className="row g-4">
           {mainServices.map((service) => (
             <div key={service.id} className="col-md-6 col-lg-3">
-              <div className="card h-100 shadow-sm border-0">
+              <div className="card service-card h-100 shadow-sm border-0">
                 <div className="card-body text-center">
                   <div className="service-icon-container mb-3 text-success">
                     {service.icon}
                   </div>
-                  <h5 className="card-title fw-semibold text-success">
+                  <h5 className="card-title service-card-title fw-semibold text-success">
                     {service.title}
                   </h5>
-                  <p className="card-text text-muted">{service.subtitle}</p>
-                  <p className="card-text small">{service.description}</p>
+                  <p className="card-text service-card-text text-muted">
+                    {service.subtitle}
+                  </p>
+                  <p className="card-text service-card-text small">
+                    {service.description}
+                  </p>
                 </div>
               </div>
             </div>

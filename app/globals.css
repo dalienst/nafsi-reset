@@ -34,16 +34,16 @@ body {
   /* Matches your existing color scheme */
 }
 
-.card:hover {
+.service-card:hover {
   transform: scale(1.05);
   transition: all 0.3s ease-in-out;
 }
 
-.card-title {
+.service-card-title {
   font-size: 1.25rem;
 }
 
-.card-text.small {
+.service-card-text.small {
   font-size: 0.9rem;
   color: #6c757d;
 }
