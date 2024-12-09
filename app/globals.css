@@ -11,6 +11,19 @@ body {
   box-sizing: border-box;
 }
 
+.bg-success {
+  background-color: var(--greenColor) !important;
+}
+
+.text-success {
+  color: var(--greenColor) !important;
+}
+
+.btn-success {
+  background-color: var(--greenColor) !important;
+  border-color: var(--greenColor) !important;
+}
+
 .nav-brand {
   color: var(--greenColor);
 }

@@ -33,13 +33,13 @@ const socials = [
     id: 2,
     title: "Tiktok",
     icon: <FaTiktok className="text-white text-2xl" />,
-    link: "https://www.tiktok.com/@nafsi.reset",
+    link: "https://www.tiktok.com/@nafsi_reset",
   },
   {
     id: 3,
     title: "Instagram",
     icon: <FaInstagram className="text-white text-2xl" />,
-    link: "https://www.instagram.com/nafsi.reset/",
+    link: "https://www.instagram.com/nafsi_reset/",
   },
   {
     id: 4,
