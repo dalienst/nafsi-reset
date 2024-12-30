@@ -67,7 +67,7 @@ function Login() {
 
         <button
           type="submit"
-          className="btn btn-dark rounded-0 w-100"
+          className="btn btn-success rounded-0 w-100"
           disabled={loading}
         >
           {loading ? "Logging in..." : "Login"}

@@ -95,7 +95,7 @@ function PasswordReset() {
             <div className="d-flex justify-content-center mb-3">
               <button
                 type="submit"
-                className="btn btn-dark rounded-0 w-100"
+                className="btn btn-success rounded-0 w-100"
                 disabled={loading}
               >
                 {loading ? "Loading..." : "Reset Password"}
