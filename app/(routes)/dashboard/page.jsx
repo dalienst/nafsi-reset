@@ -23,7 +23,7 @@ function Dashboard() {
         </ol>
       </nav>
 
-      <section className="mb-3 mt-3">
+      <section className="mb-3">
         <h1 className="h2">Welcome, {profile?.name}</h1>
       </section>
     </div>
