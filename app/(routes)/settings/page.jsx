@@ -1,10 +1,10 @@
 "use client";
+import LoadingSpinner from "@/components/portal/LoadingSpinner";
 import { useFetchProfile } from "@/hooks/accounts/actions";
 import useAxiosAuth from "@/hooks/useAxiosAuth";
 import useUserId from "@/hooks/useUserId";
 import { updateProfile } from "@/services/accounts";
 import { Field, Form, Formik } from "formik";
-import Link from "next/link";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 
@@ -18,6 +18,8 @@ function Settings() {
     data: profile,
     refetch: refetchProfile,
   } = useFetchProfile();
+
+  if (isLoadingProfile) return <LoadingSpinner />;
 
   return (
     <div className="auth-screen">
