@@ -44,6 +44,8 @@ function Dashboard() {
     refetch: refetchTherapySessionsByDate,
   } = useFetchTherapySessionsByDate(date);
 
+  console?.log(therapySessionsByDate);
+
   if (
     isLoadingProfile ||
     isLoadingClients ||
@@ -102,6 +104,38 @@ function Dashboard() {
 
       <section className="mb-3">
         <h5>Upcoming Therapy Sessions - {date}</h5>
+
+        <div className="table-responsive">
+          <table className="table table-bordered">
+            <thead className="table-success">
+              <tr>
+                <th>#</th>
+                <th>Therapist</th>
+                <th>Client</th>
+                <th>Status</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {therapySessionsByDate?.map((therapySession, index) => (
+                <tr key={therapySession.id}>
+                  <td>{index + 1}</td>
+                  <td>{therapySession?.therapist?.name}</td>
+                  <td>{therapySession?.client_detail?.name}</td>
+                  <td>{therapySession?.status}</td>
+                  <td>{therapySession?.start_time}</td>
+                  <td>{therapySession?.end_time}</td>
+                  <td>
+                    <button className="btn btn-success btn-sm">View</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
     </div>
   );
