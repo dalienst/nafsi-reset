@@ -25,7 +25,7 @@ function FounderSignUp() {
           try {
             await signUpFounder(values);
             toast.success("Account created successfully");
-            router.push("/auth/verify");
+            router.push("/auth/login");
           } catch (error) {
             if (
               error?.response?.data?.email[0] ||
