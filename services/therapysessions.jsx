@@ -7,6 +7,14 @@ export const getTherapySessions = async (axios) => {
   return response?.data?.results || [];
 };
 
+export const getTherapySessionsByDate = async (axios, date) => {
+  const response = await apiActions?.get(
+    `/api/therapysessions/?date=${date}`,
+    axios
+  );
+  return response?.data?.results || [];
+};
+
 export const getTherapySessionDetail = async (slug, axios) => {
   const response = await apiActions?.get(
     `/api/therapysessions/${slug}/`,
