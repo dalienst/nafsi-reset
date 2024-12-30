@@ -60,7 +60,7 @@ function Settings() {
 
             <button
               type="submit"
-              className="btn btn-success"
+              className="btn btn-success btn-sm"
               disabled={loading}
             >
               {loading ? "Updating..." : "Update"}
