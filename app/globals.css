@@ -2,6 +2,7 @@
   --greenColor: #327f17;
   --lighterGreen: #56ad3c;
   --greenOne: #168a13;
+  --primary-bg: #f8f9fa;
 }
 
 *,
@@ -64,4 +65,22 @@ body {
 .feature-icon {
   font-size: 1rem;
   color: var(--greenColor);
+}
+
+.auth-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--primary-bg);
+  padding: 1rem;
+}
+
+.form {
+  max-width: 400px;
+  width: 100%;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
