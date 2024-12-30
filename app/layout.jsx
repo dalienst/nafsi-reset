@@ -7,6 +7,8 @@ import BootstrapClient from "@/providers/BootstrapClient";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "react-hot-toast";
 import Footer from "@/components/Footer";
+import NextAuthProvider from "@/providers/NextAuthProvider";
+import TanstackQueryProvider from "@/providers/TanstackQueryProvider";
 
 export default function RootLayout({ children }) {
   return (
@@ -19,10 +21,10 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
-        <Toaster position="top-right" toastOptions={{ duration: 3000 }} />
-        <Navbar />
-        {children}
-        <Footer />
+        <Toaster position="top-center" />
+        <NextAuthProvider>
+          <TanstackQueryProvider>{children}</TanstackQueryProvider>
+        </NextAuthProvider>
         <BootstrapClient />
       </body>
     </html>

@@ -13,7 +13,6 @@ function Navbar() {
       <div className="container-fluid">
         <Link href="/" className="navbar-brand nav-brand fw-bold">
           Nafsi Reset
-          {/* <Image src="/logoNobg.png" alt="Company Logo" width={60} height={60} /> */}
         </Link>
 
         <button
