@@ -56,15 +56,15 @@ function Dashboard() {
 
   return (
     <div className="container-fluid px-4">
-      <nav aria-label="breadcrumb">
+      {/* <nav aria-label="breadcrumb" >
         <ol className="breadcrumb">
           <li className="breadcrumb-item active" aria-current="page">
             Dashboard
           </li>
         </ol>
-      </nav>
+      </nav> */}
 
-      <section className="mb-3">
+      <section className="mb-3 mt-2">
         <h3>Welcome, {profile?.name}</h3>
       </section>
 
@@ -129,7 +129,9 @@ function Dashboard() {
                   <td>{therapySession?.start_time}</td>
                   <td>{therapySession?.end_time}</td>
                   <td>
-                    <button className="btn btn-success btn-sm">View</button>
+                    <button className="btn btn-success btn-sm">
+                      <i className="bi bi-pencil-square"></i>
+                    </button>
                   </td>
                 </tr>
               ))}
