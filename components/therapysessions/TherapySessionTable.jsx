@@ -28,7 +28,9 @@ function TherapySessionTable({ therapySessions }) {
                 <td>{therapySession?.start_time}</td>
                 <td>{therapySession?.end_time}</td>
                 <td>
-                  <Link href={`/therapy-sessions/${therapySession?.slug}`}>
+                  <Link
+                    href={`/founders/therapy-sessions/${therapySession?.slug}`}
+                  >
                     <i className="bi bi-pencil-square text-success"></i>
                   </Link>
                 </td>

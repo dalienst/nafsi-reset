@@ -43,6 +43,19 @@ function Navbar() {
 
             <li className="nav-item">
               <Link
+                href="/founders/therapy-sessions"
+                className={`${
+                  pathname === "/founders/therapy-sessions"
+                    ? "nav-link nav-active"
+                    : "nav-link"
+                }`}
+              >
+                Sessions
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
                 href="/founders/settings"
                 className={`${
                   pathname === "/founders/settings"

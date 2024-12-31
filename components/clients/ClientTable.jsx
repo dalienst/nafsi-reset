@@ -1,8 +1,8 @@
-"use client"
-import Link from 'next/link';
-import React from 'react'
+"use client";
+import Link from "next/link";
+import React from "react";
 
-function ClientTable({clients}) {
+function ClientTable({ clients }) {
   return (
     <>
       {clients?.length > 0 ? (
@@ -41,12 +41,12 @@ function ClientTable({clients}) {
           </table>
         </div>
       ) : (
-        <div className="text-center">
-          <p>No clients yet</p>
+        <div className="alert alert-info">
+          <i className="bi bi-info-circle"></i> No Clients Found
         </div>
       )}
     </>
   );
 }
 
-export default ClientTable
+export default ClientTable;
