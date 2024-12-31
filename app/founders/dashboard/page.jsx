@@ -104,7 +104,7 @@ function Dashboard() {
       </section>
 
       <section className="mb-3">
-        <h5>Upcoming Therapy Sessions - {date}</h5>
+        <h6 className="mb-2">Upcoming Therapy Sessions - {date}</h6>
 
         {therapySessionsByDate?.length > 0 ? (
           <TherapySessionTable therapySessions={therapySessionsByDate} />

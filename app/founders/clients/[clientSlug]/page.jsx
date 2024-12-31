@@ -2,7 +2,9 @@
 import UpdateClient from "@/components/clients/UpdateClient";
 import LoadingSpinner from "@/components/portal/LoadingSpinner";
 import CreateSession from "@/components/therapysessions/CreateSession";
+import TherapySessionTable from "@/components/therapysessions/TherapySessionTable";
 import { useFetchClientDetail } from "@/hooks/clients/actions";
+import extractDate from "@/hooks/useDateFormat";
 import Link from "next/link";
 import React, { use, useState } from "react";
 import Modal from "react-bootstrap/Modal";
@@ -25,6 +27,8 @@ function ClientDetail({ params }) {
     data: client,
     refetch: refetchClientDetail,
   } = useFetchClientDetail(slug);
+
+  console.log(client);
 
   if (isLoadingClientDetail) return <LoadingSpinner />;
 
@@ -56,6 +60,38 @@ function ClientDetail({ params }) {
             Update
           </button>
         </div>
+      </section>
+
+      <section className="mb-3 mt-3">
+        <div className="card">
+          <div className="card-body">
+            <p className="card-text mb-1">
+              <strong>Contact:</strong> {client?.contact}
+            </p>
+            <p className="card-text mb-1">
+              <strong>Email:</strong> {client?.email}
+            </p>
+            <p className="card-text mb-1">
+              <strong>Gender:</strong> {client?.gender}
+            </p>
+            <p className="card-text mb-1">
+              <strong>Emergency Contact:</strong> {client?.emergency_contact}
+            </p>
+            <p className="card-text mb-1">
+              <strong>Client Since:</strong> {extractDate(client?.created_at)}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mb-3">
+        <h6 className="fw-semibold">Client Sessions</h6>
+
+        {client?.sessions?.length > 0 ? (
+          <TherapySessionTable therapySessions={client?.sessions} />
+        ):(
+          <p className="text-muted">No sessions found for this client</p>
+        )}
       </section>
 
       {/* Modals */}
