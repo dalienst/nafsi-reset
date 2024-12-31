@@ -28,7 +28,6 @@ function ClientDetail({ params }) {
     refetch: refetchClientDetail,
   } = useFetchClientDetail(slug);
 
-  console.log(client);
 
   if (isLoadingClientDetail) return <LoadingSpinner />;
 

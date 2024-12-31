@@ -45,7 +45,6 @@ function Dashboard() {
     refetch: refetchTherapySessionsByDate,
   } = useFetchTherapySessionsByDate(date);
 
-  console?.log(therapySessionsByDate);
 
   if (
     isLoadingProfile ||

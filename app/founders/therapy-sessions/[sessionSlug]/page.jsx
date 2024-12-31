@@ -14,7 +14,6 @@ function TherapySessionDetail({ params }) {
     refetch: refetchTherapySessionDetail,
   } = useFetchTherapySessionDetail(slug);
 
-  console.log(therapySession);
 
   if (isLoadingTherapySessionDetail) return <LoadingSpinner />;
 
