@@ -31,6 +31,7 @@ function AddClient({ refetch, closeModal }) {
             toast?.error("Error creating client");
           } finally {
             setLoading(false);
+            closeModal();
           }
         }}
       >

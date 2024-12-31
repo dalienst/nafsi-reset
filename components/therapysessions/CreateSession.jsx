@@ -5,7 +5,7 @@ import { Field, Form, Formik } from "formik";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 
-function CreateSession({ client, refetch }) {
+function CreateSession({ client, refetch, closeModal }) {
   const [loading, setLoading] = useState(false);
   const axios = useAxiosAuth();
 
@@ -23,7 +23,6 @@ function CreateSession({ client, refetch }) {
         payment_method: "",
         notes: "",
         goals: "",
-        client_feedback: "",
       }}
       onSubmit={async (values) => {
         setLoading(true);
@@ -31,10 +30,12 @@ function CreateSession({ client, refetch }) {
           await createTherapySession(values, axios);
           toast?.success("Session created successfully");
           refetch();
+          closeModal();
         } catch (error) {
           toast?.error("Error creating session");
         } finally {
           setLoading(false);
+          closeModal();
         }
       }}
     >
@@ -42,11 +43,11 @@ function CreateSession({ client, refetch }) {
         <Form>
           <div className="row">
             <div className="col-md-6 col-sm-12 mb-3">
-              <label htmlFor="client" className="form-label">
+              <label htmlFor="client" className="form-label fw-bold">
                 Client
               </label>
               <Field
-                value={client?.reference}
+                value={client?.name}
                 type="text"
                 className="form-control"
                 id="client"
@@ -57,7 +58,7 @@ function CreateSession({ client, refetch }) {
             </div>
 
             <div className="col-md-6 col-sm-12 mb-3">
-              <label htmlFor="date" className="form-label">
+              <label htmlFor="date" className="form-label fw-bold">
                 Date
               </label>
               <Field
@@ -65,13 +66,14 @@ function CreateSession({ client, refetch }) {
                 className="form-control"
                 id="date"
                 name="date"
+                placeholder="Select Date"
               />
             </div>
           </div>
 
           <div className="row">
             <div className="col-md-6 col-sm-12 mb-3">
-              <label htmlFor="start_time" className="form-label">
+              <label htmlFor="start_time" className="form-label fw-bold">
                 Start Time
               </label>
               <Field
@@ -79,11 +81,12 @@ function CreateSession({ client, refetch }) {
                 className="form-control"
                 id="start_time"
                 name="start_time"
+                placeholder="Select Start Time"
               />
             </div>
 
             <div className="col-md-6 col-sm-12 mb-3">
-              <label htmlFor="end_time" className="form-label">
+              <label htmlFor="end_time" className="form-label fw-bold">
                 End Time
               </label>
               <Field
@@ -97,7 +100,7 @@ function CreateSession({ client, refetch }) {
 
           <div className="row">
             <div className="col-md-6 col-sm-12 mb-3">
-              <label htmlFor="session_type" className="form-label">
+              <label htmlFor="session_type" className="form-label fw-bold">
                 Session Type
               </label>
               <Field as="select" name="session_type" className="form-select">
@@ -110,7 +113,7 @@ function CreateSession({ client, refetch }) {
             </div>
 
             <div className="col-md-6 col-sm-12 mb-3">
-              <label htmlFor="status" className="form-label">
+              <label htmlFor="status" className="form-label fw-bold">
                 Status
               </label>
               <Field as="select" name="status" className="form-select">
@@ -126,7 +129,7 @@ function CreateSession({ client, refetch }) {
 
           <div className="row">
             <div className="col-md-4 col-sm-12 mb-3">
-              <label htmlFor="fee" className="form-label">
+              <label htmlFor="fee" className="form-label fw-bold">
                 Session Fee
               </label>
               <Field
@@ -134,11 +137,12 @@ function CreateSession({ client, refetch }) {
                 className="form-control"
                 id="fee"
                 name="fee"
+                placeholder="Enter Session Fee"
               />
             </div>
 
             <div className="col-md-4 col-sm-12 mb-3">
-              <label htmlFor="payment_status" className="form-label">
+              <label htmlFor="payment_status" className="form-label fw-bold">
                 Payment Status
               </label>
               <Field as="select" name="payment_status" className="form-select">
@@ -149,7 +153,7 @@ function CreateSession({ client, refetch }) {
             </div>
 
             <div className="col-md-4 col-sm-12 mb-3">
-              <label htmlFor="payment_method" className="form-label">
+              <label htmlFor="payment_method" className="form-label fw-bold">
                 Payment Method
               </label>
               <Field
@@ -157,12 +161,13 @@ function CreateSession({ client, refetch }) {
                 className="form-control"
                 id="payment_method"
                 name="payment_method"
+                placeholder="Enter Payment Method"
               />
             </div>
           </div>
 
           <div className="mb-3">
-            <label htmlFor="notes" className="form-label">
+            <label htmlFor="notes" className="form-label fw-bold">
               Notes
             </label>
             <Field
@@ -170,11 +175,12 @@ function CreateSession({ client, refetch }) {
               className="form-control"
               id="notes"
               name="notes"
+              placeholder="Enter Notes"
             />
           </div>
 
           <div className="mb-3">
-            <label htmlFor="goals" className="form-label">
+            <label htmlFor="goals" className="form-label fw-bold">
               Session Goals
             </label>
             <Field
@@ -182,18 +188,7 @@ function CreateSession({ client, refetch }) {
               className="form-control"
               id="goals"
               name="goals"
-            />
-          </div>
-
-          <div className="mb-3">
-            <label htmlFor="client_feedback" className="form-label">
-              Client Feedback
-            </label>
-            <Field
-              as="textarea"
-              className="form-control"
-              id="client_feedback"
-              name="client_feedback"
+              placeholder="Enter Session Goals"
             />
           </div>
 
