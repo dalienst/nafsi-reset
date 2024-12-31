@@ -33,7 +33,7 @@ function ClientDetail({ params }) {
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <li className="breadcrumb-item active" aria-current="page">
-            <Link href="/clients">Client</Link>
+            <Link href="/founders/clients">All Clients</Link>
           </li>
 
           <li className="breadcrumb-item active" aria-current="page">

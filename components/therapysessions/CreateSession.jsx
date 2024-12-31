@@ -32,10 +32,14 @@ function CreateSession({ client, refetch, closeModal }) {
           refetch();
           closeModal();
         } catch (error) {
-          toast?.error("Error creating session");
+          if (error?.response?.data?.non_field_errors[0]) {
+            toast?.error(error?.response?.data?.non_field_errors[0]);
+          } else {
+            toast?.error("Error creating session");
+          }
         } finally {
           setLoading(false);
-          closeModal();
+          // closeModal();
         }
       }}
     >
@@ -156,13 +160,12 @@ function CreateSession({ client, refetch, closeModal }) {
               <label htmlFor="payment_method" className="form-label fw-bold">
                 Payment Method
               </label>
-              <Field
-                type="text"
-                className="form-control"
-                id="payment_method"
-                name="payment_method"
-                placeholder="Enter Payment Method"
-              />
+              <Field as="select" name="payment_method" className="form-select">
+                <option value="">Select Payment Method</option>
+                <option value="Cash">Cash</option>
+                <option value="Mobile Transfer">Mobile Transfer</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+              </Field>
             </div>
           </div>
 

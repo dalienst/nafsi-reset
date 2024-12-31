@@ -31,7 +31,7 @@ function ClientTable({clients}) {
                   <td>{client?.gender}</td>
                   <td>{client?.emergency_contact}</td>
                   <td>
-                    <Link href={`/clients/${client?.slug}`}>
+                    <Link href={`/founders/clients/${client?.slug}`}>
                       <i className="bi bi-pencil-square text-success"></i>
                     </Link>
                   </td>
