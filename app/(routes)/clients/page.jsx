@@ -10,6 +10,7 @@ import Modal from "react-bootstrap/Modal";
 
 function ClientList() {
   const [show, setShow] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -19,6 +20,10 @@ function ClientList() {
     data: clients,
     refetch: refetchClients,
   } = useFetchClients();
+
+  const filteredClients = clients?.filter((client) =>
+    client?.name.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   if (isLoadingClients) return <LoadingSpinner />;
 
@@ -42,10 +47,7 @@ function ClientList() {
             <h3>Clients</h3>
           </div>
 
-          <button
-            className="btn btn-success btn-sm"
-            onClick={handleShow}
-          >
+          <button className="btn btn-success btn-sm" onClick={handleShow}>
             Add Client
           </button>
           <Modal
@@ -67,8 +69,20 @@ function ClientList() {
           </Modal>
         </section>
 
+        <section className="mb-3 col-md-3">
+          <input
+            type="search"
+            name="search"
+            id="search"
+            className="form-control"
+            placeholder="Search Clients"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+          />
+        </section>
+
         <section className="mb-3">
-          <ClientTable clients={clients} />
+          <ClientTable clients={filteredClients} />
         </section>
       </div>
     </>
