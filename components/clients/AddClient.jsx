@@ -5,7 +5,7 @@ import { Field, Form, Formik } from "formik";
 import React, { useState } from "react";
 import toast from "react-hot-toast";
 
-function AddClient({ refetch }) {
+function AddClient({ refetch, closeModal }) {
   const [loading, setLoading] = useState(false);
   const axios = useAxiosAuth();
 
@@ -26,6 +26,7 @@ function AddClient({ refetch }) {
             await createClient(values, axios);
             toast?.success("Client created successfully");
             refetch();
+            closeModal();
           } catch (error) {
             toast?.error("Error creating client");
           } finally {

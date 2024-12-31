@@ -30,6 +30,17 @@ function Navbar() {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link
+                href="/clients"
+                className={`${
+                  pathname === "/clients" ? "nav-link nav-active" : "nav-link"
+                }`}
+              >
+                Clients
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
                 href="/settings"
                 className={`${
                   pathname === "/settings" ? "nav-link nav-active" : "nav-link"

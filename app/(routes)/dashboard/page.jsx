@@ -1,6 +1,7 @@
 "use client";
 
 import LoadingSpinner from "@/components/portal/LoadingSpinner";
+import TherapySessionTable from "@/components/therapysessions/TherapySessionTable";
 import { useFetchProfile } from "@/hooks/accounts/actions";
 import { useFetchClients } from "@/hooks/clients/actions";
 import {
@@ -105,39 +106,13 @@ function Dashboard() {
       <section className="mb-3">
         <h5>Upcoming Therapy Sessions - {date}</h5>
 
-        <div className="table-responsive">
-          <table className="table table-bordered">
-            <thead className="table-success">
-              <tr>
-                <th>#</th>
-                <th>Therapist</th>
-                <th>Client</th>
-                <th>Status</th>
-                <th>Start Time</th>
-                <th>End Time</th>
-                <th>Action</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {therapySessionsByDate?.map((therapySession, index) => (
-                <tr key={therapySession.id}>
-                  <td>{index + 1}</td>
-                  <td>{therapySession?.therapist?.name}</td>
-                  <td>{therapySession?.client_detail?.name}</td>
-                  <td>{therapySession?.status}</td>
-                  <td>{therapySession?.start_time}</td>
-                  <td>{therapySession?.end_time}</td>
-                  <td>
-                    <button className="btn btn-success btn-sm">
-                      <i className="bi bi-pencil-square"></i>
-                    </button>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+        {therapySessionsByDate?.length > 0 ? (
+          <TherapySessionTable therapySessions={therapySessionsByDate} />
+        ) : (
+          <div className="alert alert-info">
+            <i className="bi bi-info-circle"></i> No Therapy Sessions for {date}
+          </div>
+        )}
       </section>
     </div>
   );

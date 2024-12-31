@@ -1,12 +1,19 @@
 "use client";
 
+import AddClient from "@/components/clients/AddClient";
 import ClientTable from "@/components/clients/ClientTable";
 import LoadingSpinner from "@/components/portal/LoadingSpinner";
 import { useFetchClients } from "@/hooks/clients/actions";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import Modal from "react-bootstrap/Modal";
 
 function ClientList() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const {
     isLoading: isLoadingClients,
     data: clients,
@@ -35,9 +42,29 @@ function ClientList() {
             <h3>Clients</h3>
           </div>
 
-          <button className="btn btn-outline-success btn-sm">
-            <i className="bi bi-plus-lg"></i>
+          <button
+            className="btn btn-success btn-sm"
+            onClick={handleShow}
+          >
+            Add Client
           </button>
+          <Modal
+            show={show}
+            onHide={handleClose}
+            dialogClassName="modal-dialog modal-dialog-centered"
+          >
+            <div className="modal-header">
+              <h5 className="modal-title">Add New Client</h5>
+              <button
+                type="button"
+                className="btn-close"
+                onClick={handleClose}
+              ></button>
+            </div>
+            <div className="modal-body">
+              <AddClient refetch={refetchClients} closeModal={handleClose} />
+            </div>
+          </Modal>
         </section>
 
         <section className="mb-3">
