@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-white border-bottom">
       <div className="container-fluid">
-        <Link className="navbar-brand" href="/dashboard">
+        <Link className="navbar-brand" href="/founders/dashboard">
           Nafsi Reset
         </Link>
 
@@ -30,9 +30,37 @@ function Navbar() {
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link
-                href="/settings"
+                href="/founders/clients"
                 className={`${
-                  pathname === "/settings" ? "nav-link nav-active" : "nav-link"
+                  pathname === "/founders/clients"
+                    ? "nav-link nav-active"
+                    : "nav-link"
+                }`}
+              >
+                Clients
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                href="/founders/therapy-sessions"
+                className={`${
+                  pathname === "/founders/therapy-sessions"
+                    ? "nav-link nav-active"
+                    : "nav-link"
+                }`}
+              >
+                Sessions
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                href="/founders/settings"
+                className={`${
+                  pathname === "/founders/settings"
+                    ? "nav-link nav-active"
+                    : "nav-link"
                 }`}
               >
                 Settings

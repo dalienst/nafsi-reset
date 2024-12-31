@@ -37,7 +37,6 @@ function Settings() {
             toast?.success("Profile updated successfully");
             refetchProfile();
           } catch (error) {
-            console.log(error?.response?.data);
             toast?.error("Profile update failed");
           } finally {
             setLoading(false);
