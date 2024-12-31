@@ -1,4 +1,5 @@
 "use client";
+import UpdateClient from "@/components/clients/UpdateClient";
 import LoadingSpinner from "@/components/portal/LoadingSpinner";
 import CreateSession from "@/components/therapysessions/CreateSession";
 import { useFetchClientDetail } from "@/hooks/clients/actions";
@@ -11,9 +12,13 @@ function ClientDetail({ params }) {
   const slug = clientSlug?.clientSlug;
 
   const [show, setShow] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  const handleCloseModal = () => setOpen(false);
+  const handleOpenModal = () => setOpen(true);
 
   const {
     isLoading: isLoadingClientDetail,
@@ -44,14 +49,46 @@ function ClientDetail({ params }) {
           <button onClick={handleShow} className="btn btn-success btn-sm">
             New Session
           </button>
-          <button className="btn btn-outline-success btn-sm">Update</button>
+          <button
+            onClick={handleOpenModal}
+            className="btn btn-outline-success btn-sm"
+          >
+            Update
+          </button>
         </div>
       </section>
 
+      {/* Modals */}
+      {/* update client */}
+      <Modal
+        show={open}
+        onHide={handleCloseModal}
+        dialogClassName="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
+      >
+        <div className="modal-header">
+          <h5 className="modal-title">Update Client</h5>
+          <button
+            type="button"
+            className="btn-close"
+            onClick={handleCloseModal}
+          ></button>
+        </div>
+
+        <div className="modal-body">
+          <UpdateClient
+            client={client}
+            refetch={refetchClientDetail}
+            slug={slug}
+            closeModal={handleCloseModal}
+          />
+        </div>
+      </Modal>
+
+      {/* new session */}
       <Modal
         show={show}
         onHide={handleClose}
-        dialogClassName="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg"
+        dialogClassName="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl"
       >
         <div className="modal-header">
           <h5 className="modal-title">Add New Client</h5>
