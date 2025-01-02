@@ -31,7 +31,7 @@ function Header() {
         {/* Image Section */}
         <div className="col-md-6 text-center">
           <Image
-            src="/mentalbg.png"
+            src="/logo.png"
             alt="woman"
             width={300}
             height={300}

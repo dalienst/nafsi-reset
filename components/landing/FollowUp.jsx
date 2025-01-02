@@ -15,7 +15,7 @@ export default function FollowUp() {
         <div className="row">
           <div className="col-md-6 col-sm-12 d-flex justify-content-center  mb-3">
             <Image
-              src="/services.png"
+              src="/rates.png"
               alt="woman"
               width={350}
               height={350}
