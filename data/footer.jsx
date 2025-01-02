@@ -27,7 +27,7 @@ const socials = [
     id: 2,
     title: "Tiktok",
     icon: <FaTiktok className="text-white fs-3" />,
-    link: "https://www.tiktok.com/@nafsi_rest",
+    link: "https://www.tiktok.com/@nafsi_reset",
   },
   {
     id: 3,
