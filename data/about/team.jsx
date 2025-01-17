@@ -16,7 +16,7 @@ const team = [
     id: 2,
     name: "Dalienst Oduor",
     role: "Co-Founder & Chief Technology Officer (CTO)",
-    image: "/dal.jpg",
+    image: "/dalienst.jpg",
     qualifications: "Computer Science",
     bio: `My primary focus is ensuring that all our systems are up and running seamlessly to provide 
     the best experience for our clients. I manage critical functionalities such as booking, 

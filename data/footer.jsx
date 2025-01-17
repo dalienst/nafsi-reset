@@ -87,7 +87,7 @@ const company = [
   {
     id: 1,
     title: "About Us",
-    link: "/about",
+    link: "/#about",
   },
   {
     id: 2,
