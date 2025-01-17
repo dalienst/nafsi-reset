@@ -5,7 +5,7 @@ const team = [
     role: "Founder & Therapist",
     image: "/pat.jpg",
     qualifications: `Social Work and Development Studies`,
-    story: `At Nafsi Reset, I combine my expertise in human behavior and 
+    bio: `At Nafsi Reset, I combine my expertise in human behavior and 
     psychological principles to help clients navigate challenges and unlock their potential. 
     Whether you're seeking support for stress, trauma, relationships, or personal growth, 
     I am dedicated to fostering holistic well-being through compassionate and evidence-based care.`,
