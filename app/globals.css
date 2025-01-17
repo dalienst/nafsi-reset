@@ -12,6 +12,10 @@ body {
   box-sizing: border-box;
 }
 
+p {
+  font-size: 1.2rem;
+}
+
 .bg-success {
   background-color: var(--greenColor) !important;
 }

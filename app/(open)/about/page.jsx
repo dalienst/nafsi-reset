@@ -20,7 +20,7 @@ function About() {
           </p>
         </section>
 
-        <section className="mb-3 py-3 px-md-4">
+        <section className="mb-3 py-5 px-md-4">
           {team?.map((member) => (
             <div
               key={member?.id}
