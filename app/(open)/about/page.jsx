@@ -21,10 +21,12 @@ function About() {
         </section>
 
         <section className="mb-3 py-5 px-md-4">
-          {team?.map((member) => (
+          {team?.map((member, index) => (
             <div
               key={member?.id}
-              className="d-flex flex-column flex-md-row align-items-center mb-5"
+              className={`d-flex flex-column flex-md-row align-items-center mb-5 ${
+                index % 2 === 1 ? "flex-md-row-reverse" : ""
+              }`}
             >
               {/* Image */}
               <div className="flex-shrink-0 mb-3 mb-md-0 me-md-4">
@@ -44,9 +46,7 @@ function About() {
                 <h3 className="fw-bold">{member?.name}</h3>
                 <p className="text-muted">{member?.role}</p>
                 <p className="mt-3">{member?.bio}</p>
-                <p className="mt-3">
-                  {member?.experience}
-                </p>
+                <p className="mt-3">{member?.experience}</p>
               </div>
             </div>
           ))}
