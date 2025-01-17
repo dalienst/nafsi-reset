@@ -58,9 +58,9 @@ function Navbar() {
 
             <li className="nav-item ">
               <Link
-                href="/#about"
+                href="/about"
                 className={`${
-                  pathname === "/#about"
+                  pathname === "/about"
                     ? "nav-link nav-active text-success"
                     : "nav-link "
                 }`}
