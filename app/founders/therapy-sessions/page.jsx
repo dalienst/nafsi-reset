@@ -18,7 +18,9 @@ function TherapySessions() {
       session?.therapist?.name
         ?.toLowerCase()
         .includes(searchQuery.toLowerCase()) ||
-      session?.client_detail?.name?.toLowerCase().includes(searchQuery.toLowerCase())
+      session?.client_detail?.name
+        ?.toLowerCase()
+        .includes(searchQuery.toLowerCase())
   );
 
   if (isLoadingTherapySessions) return <LoadingSpinner />;
@@ -29,7 +31,7 @@ function TherapySessions() {
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb">
             <li className="breadcrumb-item active" aria-current="page">
-              <Link href="/dashboard">Dashboard</Link>
+              <Link href="/founders/dashboard">Dashboard</Link>
             </li>
 
             <li className="breadcrumb-item active" aria-current="page">

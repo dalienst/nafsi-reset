@@ -33,7 +33,7 @@ function ClientList() {
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb">
             <li className="breadcrumb-item active" aria-current="page">
-              <Link href="/dashboard">Dashboard</Link>
+              <Link href="/founders/dashboard">Dashboard</Link>
             </li>
 
             <li className="breadcrumb-item active" aria-current="page">
