@@ -153,6 +153,7 @@ function CreateSession({ client, refetch, closeModal }) {
                 <option value="">Select Payment Status</option>
                 <option value="Paid">Paid</option>
                 <option value="Unpaid">Unpaid</option>
+                <option value="Pro-Bono">Pro-Bono</option>
               </Field>
             </div>
 
@@ -165,6 +166,7 @@ function CreateSession({ client, refetch, closeModal }) {
                 <option value="Cash">Cash</option>
                 <option value="Mobile Transfer">Mobile Transfer</option>
                 <option value="Bank Transfer">Bank Transfer</option>
+                <option value="Free">Free</option>
               </Field>
             </div>
           </div>
